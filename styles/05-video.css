@@ -1,0 +1,87 @@
+.video-section {
+    display: grid;
+    column-gap: 16px;
+    row-gap: 32px;
+    margin-top: 24px;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16/9; /* 16:9 비율 유지 */
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* 영상 시간 - 썸네일 하단 우측 */
+.video-time {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+
+    font-size: var(--font-size-normal);
+    font-weight: 500;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+}
+
+/* 비디오 정보 틀 */
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    column-gap: 12px;
+}   
+
+/* 프로필 사진 */
+.profile-picture {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 비디오 제목 */
+.video-title {
+    font-size: var(--font-size-large);
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 20px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+/* 채널 이름, 비디오 정보 */
+.video-author,
+.video-status {
+    font-size: var(--font-size-normal);
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-top: 2px;
+
+}
+
+/* 반응형 - PC 기준으로 통일.*/
+@media (max-width: 1300px) { 
+    .video-section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* 1024px 이하일 때: 2열로 축소 */
+@media (max-width: 1024px) { 
+    .video-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 767px 이하일 때: 1열로 축소 (모바일) */
+@media (max-width: 767px) { 
+    .video-section {
+        grid-template-columns: 1fr;
+    }
+}

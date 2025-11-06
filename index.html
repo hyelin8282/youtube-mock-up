@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="styles/01-general.css"/>
+    <link rel="stylesheet" href="styles/02-header.css"/>
+    <link rel="stylesheet" href="styles/03-sidebar.css"/>
+    <link rel="stylesheet" href="styles/04-chips.css"/>
+    <link rel="stylesheet" href="styles/05-video.css"/>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <!-- 로고 부분 -->
+        <div class="left-section">
+            <button class="hamburger-menu-button">
+                <img src="assets/icons/hamburger-menu.svg" alt="메뉴열기" class="hamburger-menu"/>
+            </button>
+
+            <a href="/" class="youtube-logo-link" aria-label="유튜브 홈으로 이동">
+                <img src="assets/icons/youtube-logo.svg" alt="유튜브 로고" class="youtube-logo"/>
+            </a>
+        </div>
+        <!-- main-section -->
+        <div class="main-section">
+            <form class="search-form" action="/search" method="GET">
+                <input type="text" class="search-bar" placeholder="search" name="q" aria-label="검색어 입력"/>
+                
+                <button class="keyboard-button" type="button" aria-label="키보드 입력 도구">
+                    <img src="https://www.gstatic.com/inputtools/images/tia.png" alt="키보드 아이콘" class="keyboard-icon"/>
+                    <div class="tooltip">keyboard</div>
+                </button>
+
+                <button class="search-button" type="submit" aria-label="검색">
+                    <img src="assets/icons/search.svg" alt="" class="search-icon"/>
+                    <div class="tooltip">search</div>
+                </button>
+            </form>
+
+            <button class="voice-search-button" aria-label="음성 검색">
+                <img src="assets/icons/voice-search-icon.svg" alt="" class="voice-search-icon"/>
+                <div class="tooltip">음성으로 검색</div> </button>
+        </div>
+        <!-- -->
+        <div class="right-section">
+            <button class="upload-button" aria-label="만들기">
+                <span class="plus-icon">+</span> <span class="upload-text">만들기</span>
+            </button>
+
+            <button class="notifications-button" aria-label="알림">
+                <img src="assets/icons/notifications.svg" alt="알림 아이콘" class="notifications-icon"/>
+                <div class="notifications-count">1</div>
+                <div class="tooltip">알림</div>
+            </button>
+            
+            <a href="/profile" class="current-user-link" aria-label="프로필">
+                <img src="assets/images/avatars/avatar-1.png" alt="현재 사용자 프로필 이미지" class="current-user-picture"/>
+                <div class="tooltip">프로필</div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sidebar Component -->
+    <nav class="sidebar">
+        <a href="#" class="sidebar-link">
+            <img src="assets/icons/home.svg" alt="홈 아이콘"/>
+            <span>홈</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="assets/icons/originals.svg" alt="구독 아이콘"/>
+            <span>구독</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="assets/icons/youtube-music.svg" alt="youtube music"/>
+            <span>youtube music</span>
+        </a>
+        <a href="#" class="sidebar-link">
+            <img src="assets/icons/explore.svg" alt="탐색 아이콘"/>
+            <span>탐색</span>
+        </a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-container">
+        <!-- Chip Section -->
+        <section class="chips-section">
+            <button class="chip">전체</button>
+            <button class="chip">뉴스</button>
+            <button class="chip">게임</button>
+            <button class="chip">음악</button>
+            <button class="chip">팟캐스트</button>
+            <button class="chip">라이브</button>
+            <button class="chip">축구</button>
+            <button class="chip">최근 업로드된 게시물</button>
+            <button class="chip">팔</button>
+            <button class="chip">감상</button>
+            <button class="chip">요리</button>
+            <button class="chip">최근 업로드된 동영상</button>
+        </section>
+        <!-- Video Section -->
+        <section class="video-section">
+            <!-- 1 -->
+            <article class="video-preview">
+                <div class="thumbnail-row">
+                    <img src="assets/images/thumbnails/thumbnail-1.jpeg" alt="비디오 제목1" class="thumbnail"/>
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="assets/images/avatars/avatar-1.png" alt="프로필 사진" class="profile-picture"/>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">아름다운 풍경</h3>
+                        <p class="video-author">아이디</p>
+                        <p class="video-status">
+                            3 views <time datetime="2024-04-05">5 months ago</time>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 2 -->
+            <article class="video-preview">
+                <div class="thumbnail-row">
+                    <img src="assets/images/thumbnails/thumbnail-2.jpeg" alt="비디오 제목2" class="thumbnail"/>
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="assets/images/avatars/avatar-1.png" alt="프로필 사진" class="profile-picture"/>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">아름다운 풍경</h3>
+                        <p class="video-author">아이디</p>
+                        <p class="video-status">
+                            3 views <time datetime="2024-04-05">5 months ago</time>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 3 -->
+            <article class="video-preview">
+                <div class="thumbnail-row">
+                    <img src="assets/images/thumbnails/thumbnail-3.jpeg" alt="비디오 제목3" class="thumbnail"/>
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="assets/images/avatars/avatar-1.png" alt="프로필 사진" class="profile-picture"/>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">아름다운 풍경</h3>
+                        <p class="video-author">아이디</p>
+                        <p class="video-status">
+                            3 views <time datetime="2024-04-05">5 months ago</time>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 4 -->
+            <article class="video-preview">
+                <div class="thumbnail-row">
+                    <img src="assets/images/thumbnails/thumbnail-4.jpeg" alt="비디오 제목4" class="thumbnail"/>
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="assets/images/avatars/avatar-1.png" alt="프로필 사진" class="profile-picture"/>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">아름다운 풍경</h3>
+                        <p class="video-author">아이디</p>
+                        <p class="video-status">
+                            3 views <time datetime="2024-04-05">5 months ago</time>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 5 -->
+            <article class="video-preview">
+                <div class="thumbnail-row">
+                    <img src="assets/images/thumbnails/thumbnail-5.jpeg" alt="비디오 제목5" class="thumbnail"/>
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="assets/images/avatars/avatar-1.png" alt="프로필 사진" class="profile-picture"/>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">아름다운 풍경</h3>
+                        <p class="video-author">아이디</p>
+                        <p class="video-status">
+                            3 views <time datetime="2024-04-05">5 months ago</time>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 6 -->
+            <article class="video-preview">
+                <div class="thumbnail-row">
+                    <img src="assets/images/thumbnails/thumbnail-6.jpeg" alt="비디오 제목6" class="thumbnail"/>
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="assets/images/avatars/avatar-1.png" alt="프로필 사진" class="profile-picture"/>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">아름다운 풍경</h3>
+                        <p class="video-author">아이디</p>
+                        <p class="video-status">
+                            3 views <time datetime="2024-04-05">5 months ago</time>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 7 -->
+            <article class="video-preview">
+                <div class="thumbnail-row">
+                    <img src="assets/images/thumbnails/thumbnail-7.jpeg" alt="비디오 제목7" class="thumbnail"/>
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="assets/images/avatars/avatar-1.png" alt="프로필 사진" class="profile-picture"/>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">아름다운 풍경</h3>
+                        <p class="video-author">아이디</p>
+                        <p class="video-status">
+                            3 views <time datetime="2024-04-05">5 months ago</time>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 8 -->
+            <article class="video-preview">
+                <div class="thumbnail-row">
+                    <img src="assets/images/thumbnails/thumbnail-8.jpeg" alt="비디오 제목8" class="thumbnail"/>
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img src="assets/images/avatars/avatar-1.png" alt="프로필 사진" class="profile-picture"/>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">아름다운 풍경</h3>
+                        <p class="video-author">아이디</p>
+                        <p class="video-status">
+                            3 views <time datetime="2024-04-05">5 months ago</time>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,280 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: var(--bg-primary);
+    height: var(--header-height); /* 01-general.css의 전역 변수 사용 */
+}
+
+/* # 1. Left Section */
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: transparent; /* 버튼 배경 투명 */
+    cursor: pointer;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 8px; /* 햄버거 메뉴와 로고 사이 간격 */
+
+    transition: background-color 0.15s; /* 호버 시 배경색 변화 부드럽게 */
+}
+
+.hamburger-menu-button:hover {
+    background-color: var(--button-hover-bg); /* 호버 시 배경색 변경 */
+}
+
+.hamburger-menu {
+    height: 24px;
+    width: 24px;
+    filter: var(--icon-filter);
+}
+
+/* YouTube Logo */
+.youtube-logo-link {
+    display: flex;
+    align-items: center;
+    padding: 18px 14px 18px 14px;
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.youtube-logo {
+    width: 93px;
+    height: 20px;
+    filter: var(--icon-filter);
+}
+
+/* # 2. Main Section */
+/* 02-header.css - Main Section */
+
+.main-section {
+    display: flex;
+    flex: 1; 
+    max-width: 600px; /* 검색 영역 최대 너비 */
+    margin: 0 auto; /* 좌우 마진 auto로 중앙 배치 */
+    align-items: center;
+}
+
+/* 입력창 + 버튼들을 묶는 Flex 컨테이너 */
+.search-form {
+    display: flex;
+    flex: 1;
+    margin-right: 8px; /* 음성 검색 버튼과의 간격 */
+    align-items: center;
+}
+
+/* 검색 입력창 */
+.search-bar {
+    flex: 1;
+    height: 40px;
+    padding: 0 16px;
+    font-size: var(--font-size-large);
+    
+    /* 테두리: 왼쪽/위/아래 유지 */
+    border: 1px solid var(--search-border);
+    border-right: none; /* 버튼과 이어지도록 오른쪽 테두리 제거 */
+    
+    background-color: var(--search-bg);
+    color: var(--text-primary);
+    
+    border-radius: 20px 0 0 20px; /* 왼쪽만 둥글게 */
+    box-sizing: border-box;
+}
+
+.search-bar::placeholder {
+    font-size: var(--font-size-large);
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+/* 폼 내부 버튼 공통 스타일 (keyboard-button, search-button) */
+.search-form button {
+    height: 40px;
+
+    /* 테두리, 배경, 색상 변수 적용 */
+    border: 1px solid var(--search-border); 
+    background-color: var(--bg-primary); 
+    
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 툴팁 기준점 */
+}
+
+.keyboard-button {
+    width: 40px; 
+    
+    /* 테두리 연결: search-bar의 오른쪽 테두리를 이어받아 그립니다. */
+    border-left: none; 
+    /* 검색 버튼과 이어지도록 오른쪽 테두리 제거 */
+    border-right: none; 
+}
+
+.search-button {
+    width: 66px; /* 유튜브 표준 너비 */
+    
+    /* 테두리 연결: keyboard-button과 이어지도록 왼쪽 테두리 제거 */
+    border-left: none; 
+    
+    border-radius: 0 20px 20px 0; /* 오른쪽만 둥글게 */
+}
+
+/* 음성 검색 버튼 (원형 아이콘) */
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.15s;
+}
+
+.voice-search-button:hover {
+    background-color: var(--button-hover-bg); 
+}
+
+/* 아이콘 이미지 크기 설정 */
+.keyboard-icon {
+    height: 11px; 
+    width: 19px;
+    filter: var(--icon-filter); /* 테마에 따른 색상 필터 적용 */
+}
+.search-icon,
+.voice-search-icon {
+    height: 24px; 
+    width: 24px;
+    filter: var(--icon-filter); /* 테마에 따른 색상 필터 적용 */
+}
+
+/* # 3. Right Section */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+/* 만들기 버튼 (upload-button) */
+.upload-button {
+    display: flex;
+    align-items: center;
+    
+    background-color: var(--bg-primary); 
+    color: var(--text-primary);
+    border: 1px solid var(--border-color); /* 경계선 */
+    border-radius: 18px; 
+    padding: 6px 14px; 
+    font-size: var(--font-size-normal);
+    gap: 6px; 
+    cursor: pointer;
+    transition: background-color 0.15s;
+    
+    /* *추가: 버튼 초기 스타일 리셋* */
+    text-align: center;
+    text-transform: none;
+    line-height: normal;
+}
+
+.upload-button:hover {
+    background-color: var(--upload-button-hover-bg);
+}
+
+.plus-icon { 
+    font-size: var(--font-size-large);
+    font-weight: 500;
+}
+
+/* 알림 및 프로필 아이콘 버튼 공통 스타일 */
+.notifications-button,
+.current-user-link {
+    height: 40px; 
+    width: 40px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.15s;
+}
+
+.notifications-button:hover,
+.current-user-link:hover {
+    background-color: var(--button-hover-bg); 
+}
+
+.notifications-icon {
+    height: 24px;
+    width: 24px;
+    filter: var(--icon-filter); /* 아이콘 색상 전환 필터 적용 */
+}
+
+/* 알림 숫자 */
+.notifications-count {
+    position: absolute;
+    top: 5px; 
+    right: 5px; 
+    background-color: var(--youtube-red);
+    color: white;
+    font-size: var(--font-size);
+    padding: 1px 4px;
+    border-radius: 8px;
+    line-height: 1.2;
+    border: 1px solid var(--bg-primary); /* 배경색과 분리 */
+}
+
+.current-user-picture {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 툴팁 스타일 */
+.search-form button .tooltip,
+.voice-search-button .tooltip,
+.notifications-button .tooltip,
+.current-user-link .tooltip {
+    position: absolute;
+    /* 💥 변수 적용 */
+    background-color: var(--text-secondary); 
+    color: white; 
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: var(--font-size-small); /* 폰트 크기 수정 (이전 2px은 너무 작음) */
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* 툴팁 보여주기 */
+.search-form button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.notifications-button:hover .tooltip,
+.current-user-link:hover .tooltip {
+    opacity: 1;
+}

@@ -1,0 +1,109 @@
+.sidebar {
+    /* 컴포넌트의 독립성을 위하여 재명시 */
+    grid-area: sidebar;
+    background-color: var(--bg-primary);
+    padding: 12px 0;
+
+    /* 스크롤바가 필요할 때만 나타나도록 설정 */
+    overflow-y: overlay;
+}
+
+/* 스크롤바 */
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+    background-color: var(--text-secondary);
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+/* 사이드바 스타일 */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    margin-bottom: 4px;
+    height: 40px;
+    cursor: pointer;
+    text-decoration: none;
+
+    color: var(--text-primary);
+
+    border: none;
+    border-radius: 10px;    /* 둥근게 이쁜거같아 */
+    background-color: transparent;
+    transition: background-color 0.15s;
+}
+
+.sidebar-link:hover {
+    background-color: var(--button-hover-bg);
+    border-radius: 10px;
+}
+
+/* 활성화된 사이드바
+.sidebar-link.active {
+    background-color: var(--button-hover-bg); 
+    border-radius: 10px;
+} */
+
+.sidebar-link img {
+    height: 24px;
+    width: 24px;
+    margin-right: 24px;
+    filter: var(--icon-filter); /* 테마에 따른 색상 필터 적용 */
+}
+
+.sidebar-link span {
+    font-size: var(--font-size-normal);
+    font-weight: 500px;
+}
+
+/* 반응형 */
+/* 1024px 아하인 경우 */
+@media (max-width: 1024px) {
+    .sidebar {
+        padding-top: 5px;
+    }
+
+    .sidebar-link {
+        height: 72px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* 아이콘과 텍스트 - 세로 정렬 */
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .sidebar-link img {
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+
+    .sidebar-link span {
+        font-size: var(--font-size-small);
+        text-align: center;
+    }
+}
+
+/* 768px 아하인 경우 */
+@media (max-width: 767px) {
+    .sidebar {
+        /* 링크가 클릭되지 않도록 설정 */
+        pointer-events: none; 
+    }
+    
+    .sidebar-link {
+        /* 링크 요소가 화면 밖으로 완전히 이동하거나 숨겨지도록 설정 */
+        display: none; 
+    }
+}
