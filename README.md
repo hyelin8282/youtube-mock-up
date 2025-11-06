@@ -69,7 +69,7 @@ youtube-mock-up/
 | :--- | :--- | :--- | :--- |
 | PC | 기본 설정 | 4열 (1fr 1fr 1fr 1fr) | 240px(--sidebar-width) |
 | 데스크톱 | max-width: 1300px | 3열 (1fr 1fr 1fr) | 240px(--sidebar-width) |
-| 태블릿 | max-width: 1024px | 2열 ( 1fr 1fr) | 72px(--small-sidebar-width) |
+| 태블릿 | max-width: 1024px | 2열 (1fr 1fr) | 72px(--small-sidebar-width) |
 | 모바일 | max-width: 767px | 1열 (1fr) | 0 (숨김처리) |
 
 
