@@ -76,6 +76,6 @@ youtube-mock-up/
 ### 결과 화면 (Screenshots)
 
 ![데스크톱화면-FULL](assets/screenshots/Youtube-1.png)
-* 가로 1300px 이상 - 비디오 4열, 사이드바 확장 (240px)*
+*가로 1300px 이상 - 비디오 4열, 사이드바 확장 (240px)*
 ![데스크톱화면-885px](assets/screenshots/Youtube-3.png)
-* 가로 1024px 이하 - 비디오 2열, 사이드바 축소 (72px)*
+*가로 1024px 이하 - 비디오 2열, 사이드바 축소 (72px)*
