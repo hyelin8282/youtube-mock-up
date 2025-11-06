@@ -1,7 +1,7 @@
 # 📄 YouTube Mock-up
 
 유튜브 홈 화면을 클론한 프로젝트로, HTML5와 CSS3를 활용하여 **PC 우선(Desktop First) 반응형 레이아웃** 기능을 구현하는 데 초점을 맞췄습니다.
-추가로 **테마 전환(Dark/Light Mode)**을 위해 CSS 변수를 활용하여 구현하였습니다.
+추가로 **테마 전환(Dark/Light Mode)** 을 위해 CSS 변수를 활용하여 구현하였습니다.
 
 
 ### 주요 기술 스택
